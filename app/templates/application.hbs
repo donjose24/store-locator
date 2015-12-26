@@ -1,3 +1,37 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="container">
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
 
-{{outlet}}
+      <!--<section class="middle tab-bar-section">
+        <h1 class="title">MediSearch</h1>
+        </section> -->
+    </nav>
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li>{{#link-to "index"}}<span class="ion ion-android-home"></span>&nbsp; Home{{/link-to}}</li>
+        <li><a href="#"><span class="ion ion-android-cart"></span>&nbsp; Products</a></li>
+        <li><a href="#"><span class="ion ion-android-clipboard"></span>&nbsp; Stores</a></li>
+        <li><a href="#"><span class="ion ion-android-contacts"></span>&nbsp; About</a></li>
+        <li><a href="#"><span class="ion ion-card"></span>&nbsp; Contact</a></li>
+      </ul>
+    </aside>
+    <ul class="menuuu">
+      <li class="sub-menu-li">{{#link-to "index"}}<span class="ion ion-ios-home"></span>{{/link-to}}</li>
+      <li class="sub-menu-li"><a href="#"><span class="ion ion-medkit"></span></a></li>
+      <li class="sub-menu-li"><a href="#"><span class="ion ion-clipboard"></span></a></li>
+    </ul>
+    <section class="main-section">
+      <div class="container app-container">
+        {{outlet}}
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+<script>
+  $(document).foundation();
+</script>

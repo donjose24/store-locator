@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Lato';
+  font-weight: normal;
+  src: url('/fonts/Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'Lato-Bold';
+  font-weight: bold;
+  src : url('/fonts/Lato-Bold.ttf');
+}
+*{
+  font-family: 'Lato';
+}
+body {
+  background-color:#bdc3c7;
+}
+.off-canvas-wrap, .off-canvas-wrap > .inner-wrap {
+  min-height: 100vh;
+}
+.menuuu {
+  background-color:white;
+  width:100%;
+  margin-left:0;
+}
+.sub-menu-li {
+  list-style-type:none;
+  display:inline-block;
+  width:32%;
+  text-align:center;
+}
+.sub-menu-li a {
+  color:#bdc3c7;
+  font-size:25px;
+}
+.sub-menu-li a:active {
+  color: #34495e;
+}
+ul.off-canvas-list li a {
+  color: #ecf0f1;
+  font-weight:bold;
+}
+.container {
+  background-color: #ecf0f1;
+  width:100%;
+}
+.columns {
+  background-color:white;
+  padding:10%;
+}
+.form-search {
+  text-align:center;
+}
