@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.creativejose.storelocator"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.creativejose.storelocator"
         }
     },
     "dependent_plugins": {}
