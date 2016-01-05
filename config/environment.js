@@ -24,11 +24,11 @@ module.exports = function(environment) {
     }
   };
 
-  ENV.contentSeucrityPolicy = {
-    'script-src': "'self' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com",
-    'img-src': "'self' https://*.googleapis.com https://*.gstatic.com",
+  ENV.contentSecurityPolicy = {
+    'script-src': "'self' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com https://*.herokuapp.com",
+    'img-src': "'self' https://*.googleapis.com https://*.gstatic.com https://*.herokuapp.com",
     'font-src': "'self' https://*.gstatic.com",
-    'style-src': "'self' 'unsafe-inline' https://*.googleapis.com"
+    'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
   }
 
   if (environment === 'development') {

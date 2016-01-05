@@ -1,27 +1,35 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+
+  api : Ember.inject.service('medisearch-api'),
+
   didInsertElement : function() {
     this._super();
     this.loadGoogleMapsScript();
   },
+
   insertMap : function() {
     let container = this.$('.map-canvas')[0];
-    if(navigator.geolocation) {
+    this.get('api').getStores().then(function(stores){
       navigator.geolocation.getCurrentPosition(function(pos){
-         var options = {
+        let options = {
           center : new window.google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-          zoom :15
-        };       
-        new window.google.maps.Map(container, options);
-      },function(error){
-        var options = {
-          center : new window.google.maps.LatLng(10, 10),
-          zoom :15
+          zoom :12
         };
-        new window.google.maps.Map(container, options);
+        let map = new window.google.maps.Map(container, options);
+        for(let index = 0; index < stores.length; ++index ) {
+          console.log(stores[index]);
+          new window.google.maps.Marker({
+            position : new window.google.maps.LatLng(stores[index].lat, stores[index].long),
+            map : map,
+            title: stores[index].name
+          });
+        }
       });
-    }
+    },function(err){
+      console.log(err);
+    });
   },
 
   loadGoogleMapsScript : function() {
