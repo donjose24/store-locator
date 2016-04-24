@@ -14,6 +14,7 @@
     "qunit": "~1.20.0",
     "foundation": "~5.5.3",
     "Ionicons": "driftyco/ionicons#~2.0.1",
-    "foundation-apps": "~1.2.0"
+    "foundation-apps": "~1.2.0",
+    "css-modal": "~1.4.1"
   }
 }

@@ -13,7 +13,7 @@
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         <li>{{#link-to "index" class="active"}}<span class="ion ion-android-home"></span>&nbsp; Home{{/link-to}}</li>
-        <li><a href="#"><span class="ion ion-android-cart"></span>&nbsp; Products</a></li>
+        <li>{{#link-to "product"}}<span class="ion ion-medkit"></span>&nbsp; Medicines{{/link-to}}</li>
         <li>{{#link-to "store" class="active"}}<span class="ion ion-android-clipboard"></span>&nbsp; Stores {{/link-to}}</li>
         <li><a href="#"><span class="ion ion-android-contacts"></span>&nbsp; About</a></li>
         <li><a href="#"><span class="ion ion-card"></span>&nbsp; Contact</a></li>
@@ -21,8 +21,8 @@
     </aside>
     <ul class="menuuu">
       {{#link-to "index" class="menu-link"}}<li class="sub-menu-li"><span class="ion ion-ios-home"></span></li>{{/link-to}}
-      <li class="sub-menu-li"><a href="#"><span class="ion ion-medkit"></span></a></li>
-      <li class="sub-menu-li"><a href="#"><span class="ion ion-clipboard"></span></a></li>
+      <li class="sub-menu-li">{{#link-to "product"}}<span class="ion ion-medkit"></span>{{/link-to}}</li>
+      {{#link-to "store" class="menu-link"}}<li class="sub-menu-li"><span class="ion ion-clipboard"></span></li>{{/link-to}}
     </ul>
     <section class="main-section">
       <div class="container app-container">

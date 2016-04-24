@@ -1,0 +1,16 @@
+{{#if isLoading}}
+  <div style="text-align:center;">
+    <span class="cssload-loader"><span class="cssload-loader-inner"></span></span>
+    <h6>Loading..</h6>
+  </div>
+{{/if}}
+
+<ul class="small-block-grid-1">
+  {{#each products as |product|}}  
+    <li style="cursor:pointer" {{action "viewProduct" products}}  on="touchEnd" class="store-item">
+      <span style="font-weight:bold; color:#2980b9">{{product.name}}</span> <br>
+      <small>{{product.category}}</small>
+    </li>
+  {{/each}}
+</ul>
+{{yield}}

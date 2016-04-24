@@ -1,6 +1,12 @@
+{{#if isLoading}}
+  <div style="text-align:center;">
+    <span class="cssload-loader"><span class="cssload-loader-inner"></span></span>
+    <h6>Loading..</h6>
+  </div>
+{{/if}}
 <ul class="small-block-grid-1">
 {{#each stores as |store|}}
-  <li class="store-item" {{action "viewStore" store}} data-reveal-id="myModal">
+  <li style="cursor:pointer"  {{action "viewStore" store}} on="touchEnd" class="store-item">
     <span style="font-weight:bold; color:#2980b9">{{store.name}}</span> <br>
     <small>{{store.address}}</small>
   </li>

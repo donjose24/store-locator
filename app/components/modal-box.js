@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
-
+export default Ember.Component.extend({ 
   storeChanged : function() {
     this.loadGoogleMapsScript();
   }.observes('store').on('init'),
@@ -26,6 +25,12 @@ export default Ember.Component.extend({
   loadGoogleMapsScript : function() {
     let self = this;
     self.insertMap();
+  },
+
+  actions : {
+    closeModal : function(){
+      this.$("#modal").fadeOut();
+    }
   }
 
 });

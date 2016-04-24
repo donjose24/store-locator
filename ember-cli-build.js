@@ -25,6 +25,14 @@ module.exports = function(defaults) {
   app.import('bower_components/foundation/js/vendor/jquery.js');
   app.import('bower_components/foundation/js/vendor/fastclick.js');
   app.import('bower_components/foundation/js/foundation.min.js');
+  app.import('vendor/foundation-init.js');
+  app.import('bower_components/css-modal/build/modal.css');
+  app.import('bower_components/css-modal/build/modal-gallery.css');
+  app.import('bower_components/css-modal/build/modal-maxwidth.css');
+  app.import('bower_components/css-modal/build/modal-resize.css');
+  app.import('bower_components/css-modal/build/modal-spinner.css');
+  app.import('bower_components/css-modal/build/modal-stretch.css');
+  
 //  app.import('vendor/gmaps.js');
   return app.toTree();
 };

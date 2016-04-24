@@ -1,9 +1,9 @@
-<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">{{store.name}}</h2>
+<div id="modal">
+  <a class="pull-right" {{action "closeModal"}}>X</A>
+  <h1 id="modal-label">{{store.name}}</h1>
   <p class="lead">{{store.address}}</p>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-
   <div class="map-canvas">
 
   </div>
+  <br>
 </div>

@@ -10,16 +10,10 @@ export default Ember.Service.extend({
   },
 
   getStores() {
-    return new Promise(function(resolve, reject){
-      if(storeData) {
-        resolve(storeData);
-      } else {
-        Ember.$.getJSON(applicationUrl + "api/store?callback=?")
-        .then((stores) => {
-          storeData = stores;
-          resolve(storeData);
-        });
-      }
-    });
+    return Ember.$.getJSON(applicationUrl + "api/store?callback=?");
+  },
+
+  getProducts() {
+      return Ember.$.getJSON(applicationUrl + "api/product?callback=?");
   }
 });
