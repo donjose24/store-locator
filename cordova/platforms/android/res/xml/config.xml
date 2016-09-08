@@ -1,11 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.creativejose.storelocator" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <preference name="loglevel" value="DEBUG" />
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <allow-intent href="market:*" />
+    <feature name="GoogleMaps">
+        <param name="android-package" value="plugin.google.maps.GoogleMaps" />
+    </feature>
+    <feature name="External">
+        <param name="android-package" value="plugin.google.maps.External" />
+    </feature>
+    <feature name="Geocoder">
+        <param name="android-package" value="plugin.google.maps.MyGeocoder" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
     <name>Medi Search</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -21,5 +31,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="*" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="loadUrlTimeoutValue" value="700000" />
 </widget>

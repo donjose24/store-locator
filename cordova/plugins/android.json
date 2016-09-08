@@ -10,9 +10,17 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.creativejose.storelocator"
         },
+        "plugin.google.maps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyCliz-Pv9AW812X3T5gJRT4wz0YYpOBNZE",
+            "PACKAGE_NAME": "com.creativejose.storelocator"
+        },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.creativejose.storelocator"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.creativejose.storelocator"
+        }
+    }
 }

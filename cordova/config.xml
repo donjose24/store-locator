@@ -24,4 +24,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="loadUrlTimeoutValue" value="700000" />
+    <allow-navigation href="*" />
 </widget>

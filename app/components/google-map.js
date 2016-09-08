@@ -25,6 +25,7 @@ export default Ember.Component.extend({
             title: stores[index].name
           });
         }
+       let map = plugin.google.maps.Map.getMap(container);
       });
 
     });
