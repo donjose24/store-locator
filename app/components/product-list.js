@@ -16,9 +16,8 @@ export default Ember.Component.extend({
 
   actions : {
     viewProduct : function(product) {
-      //this.$("modal").fadeIn();
-      console.log(product);
-      //this.set("product", product);
+      this.$("#modal").fadeIn();
+      this.set("product", product);
     }
   }
 });
