@@ -1,4 +1,4 @@
 <div class="form-search">
-  <input type="text" value="{{searchQuery}}" style="text-align:center; font-family: Arial">
-  <button class="button tiny"> <span class="ion ion-android-search"></span> Go!</button>
+  {{input type="text" value=searchQuery style="text-align:center; font-family: Arial"}}
+  <button class="button tiny" {{action "search"}}> <span class="ion ion-android-search"></span> Go!</button>
 </div>

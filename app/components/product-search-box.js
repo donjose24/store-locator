@@ -1,5 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  searchQuery : ''
+  searchQuery : '',
+
+  actions :  {
+    search : function() {
+      console.log(this.get('searchQuery'));
+    }
+  }
+
 });
