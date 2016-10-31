@@ -10,7 +10,7 @@
     <li style="cursor:pointer" {{action "viewProduct" product}}  on="touchEnd" class="store-item">
       <span style="font-weight:bold; color:#2980b9">{{product.name}}</span> <br>
       <small>{{product.category}}</small> <br/>
-      <small>P{{product.price}}</small>
+      <small>P{{formattedPrice}}</small>
     </li>
   {{/each}}
 </ul>

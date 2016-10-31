@@ -6,6 +6,15 @@ export default Ember.Component.extend({
 
   isLoading : true,
 
+  formattedPrice : Ember.computed('products.@each', function() {
+    var that = this;
+    return this.get('stores').map(function(store){
+      return {
+        'price': (store.price).toFixed(2)
+      };
+ 
+  }),
+
   didInsertElement : function() {
     let self = this;
     this.get('api').getProducts().then(function(products){
@@ -18,6 +27,7 @@ export default Ember.Component.extend({
     viewProduct : function(product) {
       this.$("#modal").fadeIn();
       this.set("product", product);
+      this.get("api").analytics(product.id, 'product');
     }
   }
 });

@@ -14,6 +14,14 @@ export default Ember.Service.extend({
   },
 
   getProducts() {
-      return Ember.$.getJSON(applicationUrl + "api/product?callback=?");
+    return Ember.$.getJSON(applicationUrl + "api/product?callback=?");
+  },
+
+  searchProducts(query){
+    return Ember.$.getJSON(applicationUrl + 'api/product/search?query=' + query);
+  },
+
+  analytics(id, model) {
+    return Ember.$.getJSON(applicationUrl + 'api/analytics?model=' + model + '&id=' +id)
   }
 });

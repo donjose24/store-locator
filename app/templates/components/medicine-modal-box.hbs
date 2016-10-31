@@ -1,7 +1,12 @@
-<div id="modal">
+<div id="modal" style="text-align:left">
   <a class="pull-right" {{action "closeModal"}}>X</A>
   <h1 id="modal-label">{{product.name}}</h1>
   <p class="lead">{{product.description}}</p>
-  <p> {{product.price}}</p>
+  <p class="lead">P{{product.price}}</p>
+  <p class="lead">Dosage: {{product.dosage}}</p>
+  <p class="lead">Category: {{product.category}}</p>
+  <p class="lead">Sr. Discount: {{seniorCitizenPrice}}</p>
+  <p class="lead">Photo: {{imgurl product.url}}</p>
   <br>
+  {{medicine-store stores=product.stores}}
 </div>

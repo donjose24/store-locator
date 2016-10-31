@@ -1,4 +1,26 @@
 <div class="form-search">
   {{input type="text" value=searchQuery style="text-align:center; font-family: Arial"}}
   <button class="button tiny" {{action "search"}}> <span class="ion ion-android-search"></span> Go!</button>
+
+{{#if isLoading}}
+  <div style="text-align:center;">
+    <span class="cssload-loader"><span class="cssload-loader-inner"></span></span>
+    <h6>Loading..</h6>
+  </div>
+{{/if}}
+
+<ul class="small-block-grid-1">
+  {{#if hasResults}}
+    <h6>Search Results:</h6>
+  {{/if}}
+  {{#each products as |product|}}
+    <li style="cursor:pointer; text-align:left" {{action "viewProduct" product}}  on="touchEnd" class="store-item">
+      <span style="font-weight:bold; color:#2980b9">{{product.name}}</span> <br>
+      <small>{{product.category}}</small> <br/>
+      <small>P{{product.price}}</small>
+    </li>
+  {{/each}}
+</ul>
+{{medicine-modal-box product=product}}
+
 </div>

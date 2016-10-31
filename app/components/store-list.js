@@ -19,6 +19,7 @@ export default Ember.Component.extend({
     viewStore : function(store) {
       this.$("#modal").fadeIn();
       this.set("store", store);
+      this.get("api").analytics(store.id, 'store');
     }
   }
 
