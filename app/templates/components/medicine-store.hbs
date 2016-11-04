@@ -3,7 +3,8 @@
   <li style="cursor:pointer" on="touchEnd" class="store-item">
     <span style="font-weight:bold; color:#2980b9">{{store.name}}</span> <br>
     <small>{{store.address}}</small><br>
-    <small>Distance: {{distance-helper proximityStore index}}km</small>
+    <small>Distance: {{distance-helper proximityStore index}}km</small> <br>
+    <small>In Stock?: {{store.pivot.status}}</small>
   </li>
 {{/each}}
 </ul>

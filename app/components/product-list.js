@@ -13,6 +13,7 @@ export default Ember.Component.extend({
         'price': (store.price).toFixed(2)
       };
  
+    })
   }),
 
   didInsertElement : function() {
